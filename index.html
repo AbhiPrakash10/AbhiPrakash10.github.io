@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhi Prakash</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">AP</a>
+      <nav class="nav__links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#about" class="nav__mobile-link">About</a>
+      <a href="#projects" class="nav__mobile-link">Projects</a>
+      <a href="#contact" class="nav__mobile-link">Contact</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__inner">
+      <p class="hero__greeting">Hello, I'm</p>
+      <h1 class="hero__name">Abhi Prakash</h1>
+      <p class="hero__tagline">Operator, investor, educator &amp; builder — working at the intersection of sports, technology, finance, and leadership.</p>
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">View My Work</a>
+        <a href="#contact" class="btn btn--outline">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">About</span>
+        <h2 class="section__title">Who I am</h2>
+      </div>
+      <div class="about__grid">
+        <div class="about__text">
+          <p>
+            Abhi Prakash is an operator, investor, educator, and builder working at the intersection of sports,
+            technology, finance, and leadership. Currently pursuing an MBA at the UCLA Anderson School of
+            Management, he is focused on building organizations and communities that create lasting impact
+            across the West Coast and beyond.
+          </p>
+          <p>
+            He earned both his Bachelor of Arts and Master of Science degrees from the University of Arizona,
+            where he developed the interdisciplinary foundation that continues to shape his work across
+            business, technology, athletics, and leadership.
+          </p>
+          <p>
+            His background spans corporate finance, product management, venture investing, consulting, real
+            estate, and grassroots athletics. Across roles with Ernst &amp; Young, General Motors, Adobe,
+            Cardone Ventures, Asearis Data Systems, and Unrivaled Sports, he has developed a reputation for
+            connecting strategic vision with disciplined execution.
+          </p>
+          <p>
+            Beyond business, Abhi is deeply committed to education, mentorship, and leadership development.
+            Through his work with Peak Basketball and youth athletics, he believes sports can serve as a
+            powerful vehicle for confidence, resilience, accountability, and opportunity. His leadership
+            philosophy centers on service, long-term thinking, and helping others realize a bigger vision
+            for themselves and their future.
+          </p>
+          <p>
+            He is currently building and supporting ventures across artificial intelligence, venture capital,
+            media, real estate, and sports infrastructure, including Lightbear.AI, Lightside Ventures, Aer
+            West, and Peak Basketball. Across each pursuit, his mission remains consistent: to build enduring
+            organizations, empower the next generation of leaders, and create systems that positively shape
+            people and communities for decades to come.
+          </p>
+          <div class="about__skills">
+            <div class="skill-tag">Venture Investing</div>
+            <div class="skill-tag">Corporate Finance</div>
+            <div class="skill-tag">Product Management</div>
+            <div class="skill-tag">AI &amp; Technology</div>
+            <div class="skill-tag">Real Estate</div>
+            <div class="skill-tag">Basketball Coaching</div>
+            <div class="skill-tag">Consulting</div>
+            <div class="skill-tag">Community Building</div>
+          </div>
+        </div>
+        <div class="about__card">
+          <img src="Prakash_Abhi-015.jpg" alt="Abhi Prakash" class="about__avatar about__avatar--photo" />
+          <div class="about__stats">
+            <div class="stat">
+              <span class="stat__num" data-target="4">0</span>
+              <span class="stat__label">Active Ventures</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-target="6">0</span>
+              <span class="stat__label">Orgs Worked</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-target="5">0</span>
+              <span class="stat__label">Industries</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">Work</span>
+        <h2 class="section__title">Featured Projects</h2>
+      </div>
+
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="tech">Tech &amp; AI</button>
+        <button class="filter-btn" data-filter="investing">Investing</button>
+        <button class="filter-btn" data-filter="realestate">Real Estate</button>
+        <button class="filter-btn" data-filter="sports">Sports</button>
+      </div>
+
+      <div class="projects__grid" id="projectsGrid">
+
+        <article class="project-card" data-category="tech">
+          <div class="project-card__header">
+            <span class="project-card__icon">&#129302;</span>
+            <span class="project-card__tag">Tech &amp; AI</span>
+          </div>
+          <h3 class="project-card__title">Lightbear.AI</h3>
+          <p class="project-card__desc">
+            An AI-powered venture focused on building intelligent tools that help operators and leaders
+            execute at a higher level. Lightbear sits at the intersection of technology and practical business application.
+          </p>
+          <div class="project-card__tech">
+            <span>Artificial Intelligence</span><span>SaaS</span><span>Operations</span>
+          </div>
+          <div class="project-card__links">
+            <a href="#contact" class="project-link">Learn More &rarr;</a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="investing">
+          <div class="project-card__header">
+            <span class="project-card__icon">&#128200;</span>
+            <span class="project-card__tag">Investing</span>
+          </div>
+          <h3 class="project-card__title">Lightside Ventures</h3>
+          <p class="project-card__desc">
+            An early-stage venture fund backing ambitious founders building at the frontier of technology
+            and human performance. Focused on finding and supporting the next generation of great builders.
+          </p>
+          <div class="project-card__tech">
+            <span>Venture Capital</span><span>Early Stage</span><span>Founder Support</span>
+          </div>
+          <div class="project-card__links">
+            <a href="#contact" class="project-link">Connect &rarr;</a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="realestate">
+          <div class="project-card__header">
+            <span class="project-card__icon">&#127961;</span>
+            <span class="project-card__tag">Real Estate</span>
+          </div>
+          <h3 class="project-card__title">Aer West</h3>
+          <p class="project-card__desc">
+            A real estate venture operating across the Western United States. Aer West focuses on acquiring
+            and developing properties with an eye toward long-term value creation and community impact.
+          </p>
+          <div class="project-card__tech">
+            <span>Real Estate</span><span>West Coast</span><span>Acquisitions</span>
+          </div>
+          <div class="project-card__links">
+            <a href="#contact" class="project-link">Learn More &rarr;</a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="sports">
+          <div class="project-card__header">
+            <span class="project-card__icon">&#127936;</span>
+            <span class="project-card__tag">Sports</span>
+          </div>
+          <h3 class="project-card__title">Peak Basketball</h3>
+          <p class="project-card__desc">
+            A grassroots basketball organization built around developing players, coaches, and communities.
+            Abhi serves on the Board of Directors and has coached high school programs including a state championship team in Arizona.
+          </p>
+          <div class="project-card__tech">
+            <span>Coaching</span><span>Community</span><span>Youth Development</span>
+          </div>
+          <div class="project-card__links">
+            <a href="#contact" class="project-link">Get Involved &rarr;</a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="tech">
+          <div class="project-card__header">
+            <span class="project-card__icon">&#128295;</span>
+            <span class="project-card__tag">Tech &amp; AI</span>
+          </div>
+          <h3 class="project-card__title">Asearis Data Systems</h3>
+          <p class="project-card__desc">
+            Applied data infrastructure work helping organizations make better decisions through
+            structured, reliable data systems and analytics pipelines.
+          </p>
+          <div class="project-card__tech">
+            <span>Data Engineering</span><span>Analytics</span><span>Infrastructure</span>
+          </div>
+          <div class="project-card__links">
+            <a href="#contact" class="project-link">Learn More &rarr;</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">Contact</span>
+        <h2 class="section__title">Let's Talk</h2>
+      </div>
+      <div class="contact__inner">
+        <div class="contact__info">
+          <p class="contact__intro">
+            Have a project in mind, a question, or just want to say hello?
+            I'd love to hear from you.
+          </p>
+          <div class="contact__links">
+            <a href="mailto:abhiprakash20@gmail.com" class="contact__link">
+              <span class="contact__link-icon">&#9993;</span>
+              abhiprakash20@gmail.com
+            </a>
+            <a href="https://github.com/AbhiPrakash10" target="_blank" rel="noopener" class="contact__link">
+              <span class="contact__link-icon">&#128279;</span>
+              github.com/AbhiPrakash10
+            </a>
+            <a href="https://www.linkedin.com/in/abhi-prakash1/" target="_blank" rel="noopener" class="contact__link">
+              <span class="contact__link-icon">&#128279;</span>
+              linkedin.com/in/abhi-prakash1
+            </a>
+          </div>
+        </div>
+        <form class="contact__form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+          <p class="form__note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__name">Abhi Prakash</span>
+      <span class="footer__copy">&copy; 2026. Built with care.</span>
+      <div class="footer__social">
+        <a href="https://github.com/AbhiPrakash10" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/abhi-prakash1/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
