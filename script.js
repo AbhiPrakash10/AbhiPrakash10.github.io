@@ -82,29 +82,29 @@ filterBtns.forEach(btn => {
   });
 });
 
-// ── Contact form (Formspree) ──
+// ── Contact form (Web3Forms) ──
 const form = document.getElementById('contactForm');
 const note = document.getElementById('formNote');
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xojbkeeb';
 
 form.addEventListener('submit', async e => {
   e.preventDefault();
-  const name    = form.name.value.trim();
-  const email   = form.email.value.trim();
-  const message = form.message.value.trim();
+  const name    = form.elements['name'].value.trim();
+  const email   = form.elements['email'].value.trim();
+  const message = form.elements['message'].value.trim();
 
   // Clear previous errors
-  [form.name, form.email, form.message].forEach(f => f.classList.remove('error'));
+  [form.elements['name'], form.elements['email'], form.elements['message']]
+    .forEach(f => f.classList.remove('error'));
   note.textContent = '';
   note.className = 'form__note';
 
   // Validate
   let valid = true;
-  if (!name)    { form.name.classList.add('error');    valid = false; }
+  if (!name)    { form.elements['name'].classList.add('error');    valid = false; }
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    form.email.classList.add('error'); valid = false;
+    form.elements['email'].classList.add('error'); valid = false;
   }
-  if (!message) { form.message.classList.add('error'); valid = false; }
+  if (!message) { form.elements['message'].classList.add('error'); valid = false; }
   if (!valid) {
     note.textContent = 'Please fill in all fields correctly.';
     return;
@@ -115,21 +115,28 @@ form.addEventListener('submit', async e => {
   submitBtn.disabled = true;
 
   try {
-    const res = await fetch(FORMSPREE_ENDPOINT, {
+    const payload = {
+      access_key: 'fa014cd4-74c9-4252-bb45-7ef6c3dbd830',
+      name,
+      email,
+      message,
+      subject: 'New message from abhiprakash.com contact form'
+    };
+
+    const res = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: new FormData(form)
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
     });
 
-    if (res.ok) {
+    const data = await res.json();
+
+    if (data.success) {
       form.reset();
       note.textContent = 'Thanks! I\'ll get back to you soon.';
       note.classList.add('success');
     } else {
-      const data = await res.json();
-      note.textContent = data.errors
-        ? data.errors.map(err => err.message).join(', ')
-        : 'Something went wrong. Please try again.';
+      note.textContent = data.message || 'Something went wrong. Please try again.';
     }
   } catch {
     note.textContent = 'Network error — please check your connection and try again.';
