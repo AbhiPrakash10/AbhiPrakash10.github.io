@@ -82,45 +82,61 @@ filterBtns.forEach(btn => {
   });
 });
 
-// ── Contact form (client-side demo) ──
+// ── Contact form (Formspree) ──
 const form = document.getElementById('contactForm');
 const note = document.getElementById('formNote');
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xojbkeeb';
 
-form.addEventListener('submit', e => {
+form.addEventListener('submit', async e => {
   e.preventDefault();
   const name    = form.name.value.trim();
   const email   = form.email.value.trim();
   const message = form.message.value.trim();
 
-  // Clear errors
+  // Clear previous errors
   [form.name, form.email, form.message].forEach(f => f.classList.remove('error'));
   note.textContent = '';
   note.className = 'form__note';
 
+  // Validate
   let valid = true;
   if (!name)    { form.name.classList.add('error');    valid = false; }
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     form.email.classList.add('error'); valid = false;
   }
   if (!message) { form.message.classList.add('error'); valid = false; }
-
   if (!valid) {
     note.textContent = 'Please fill in all fields correctly.';
     return;
   }
 
-  // Simulate send
   const submitBtn = form.querySelector('[type="submit"]');
   submitBtn.textContent = 'Sending…';
   submitBtn.disabled = true;
 
-  setTimeout(() => {
-    form.reset();
+  try {
+    const res = await fetch(FORMSPREE_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    });
+
+    if (res.ok) {
+      form.reset();
+      note.textContent = 'Thanks! I\'ll get back to you soon.';
+      note.classList.add('success');
+    } else {
+      const data = await res.json();
+      note.textContent = data.errors
+        ? data.errors.map(err => err.message).join(', ')
+        : 'Something went wrong. Please try again.';
+    }
+  } catch {
+    note.textContent = 'Network error — please check your connection and try again.';
+  } finally {
     submitBtn.textContent = 'Send Message';
     submitBtn.disabled = false;
-    note.textContent = 'Thanks! I\'ll get back to you soon.';
-    note.classList.add('success');
-  }, 1000);
+  }
 });
 
 // ── Active nav link on scroll ──
