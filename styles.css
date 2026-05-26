@@ -469,7 +469,7 @@ button { cursor: pointer; font-family: var(--font-body); }
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--steel);
+  color: var(--red);
 }
 .venture-name {
   font-family: var(--font-display);
@@ -564,7 +564,7 @@ button { cursor: pointer; font-family: var(--font-body); }
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--steel);
+  color: var(--red);
 }
 .article-status {
   font-size: 0.625rem;
@@ -634,7 +634,7 @@ button { cursor: pointer; font-family: var(--font-body); }
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--steel);
+  color: var(--red);
 }
 .speaking-info h3 {
   font-family: var(--font-display);
