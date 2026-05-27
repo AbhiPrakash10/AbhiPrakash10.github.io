@@ -13,11 +13,12 @@
   --white:      #FFFFFF;
   --red:        #6E1F28;
   --red-hover:  #8B2733;
+  --red-dark:   #D9727F; /* accessible red for use on dark backgrounds — passes 4.5:1 on midnight & graphite */
   --steel:      #324A5F;
 
   --gray-100:   #E8E5DC;
-  --gray-300:   #B8B4A8;
-  --gray-500:   #7A7670;
+  --gray-300:   #9A968F; /* was #B8B4A8 — darkened for better contrast */
+  --gray-500:   #6B6762; /* was #7A7670 — now passes 4.5:1 on white and off-white */
   --gray-700:   #3A3830;
 
   --font-display: 'Inter Tight', 'Helvetica Neue', 'Arial Black', sans-serif;
@@ -78,7 +79,7 @@ button { cursor: pointer; font-family: var(--font-body); }
   text-transform: uppercase;
   color: var(--red);
 }
-.eyebrow--light .eyebrow__text { color: rgba(255,255,255,.4); }
+.eyebrow--light .eyebrow__text { color: rgba(255,255,255,.6); } /* was .4 — now passes 4.5:1 on dark backgrounds */
 .eyebrow--light .eyebrow__line { background: var(--red); }
 
 /* ── 4. Buttons ── */
@@ -266,7 +267,7 @@ button { cursor: pointer; font-family: var(--font-body); }
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.35);
+  color: rgba(255,255,255,.55); /* was .35 — improved readability */
   margin-bottom: 52px;
   opacity: 0;
   animation: fadeUp 0.7s 0.5s var(--ease) forwards;
@@ -402,7 +403,7 @@ button { cursor: pointer; font-family: var(--font-body); }
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--gray-300);
+  color: var(--gray-500); /* was gray-300 — stat labels are meaningful content, need better contrast */
 }
 
 @media (max-width: 1024px) {
@@ -469,7 +470,7 @@ button { cursor: pointer; font-family: var(--font-body); }
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--red);
+  color: var(--red-dark); /* was var(--red) — #6E1F28 on midnight is only 1.35:1; red-dark passes 5.76:1 */
 }
 .venture-name {
   font-family: var(--font-display);
@@ -482,7 +483,7 @@ button { cursor: pointer; font-family: var(--font-body); }
 }
 .venture-desc {
   font-size: 0.9375rem;
-  color: rgba(255,255,255,.35);
+  color: rgba(255,255,255,.55); /* was .35 — improved readability on midnight */
   line-height: 1.65;
 }
 .venture-link {
@@ -550,7 +551,7 @@ button { cursor: pointer; font-family: var(--font-body); }
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--gray-300);
+  color: var(--gray-500); /* was gray-300 — better contrast on white card */
 }
 .article-featured__title {
   font-family: var(--font-display);
@@ -618,7 +619,7 @@ button { cursor: pointer; font-family: var(--font-body); }
   font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.25);
+  color: rgba(255,255,255,.45); /* was .25 — improved readability */
 }
 
 @media (max-width: 900px) {
@@ -753,19 +754,19 @@ button { cursor: pointer; font-family: var(--font-body); }
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--red);
+  color: var(--red-dark); /* was var(--red) — #6E1F28 on graphite is only 1.35:1; red-dark passes 4.91:1 */
 }
 .speaking-info h3 {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.125rem;
   letter-spacing: -0.01em;
-  color: rgba(255,255,255,.85);
+  color: rgba(255,255,255,.9);
   margin-bottom: 4px;
 }
 .speaking-info p {
   font-size: 0.875rem;
-  color: rgba(255,255,255,.3);
+  color: rgba(255,255,255,.5); /* was .3 — improved readability on graphite */
   letter-spacing: 0.02em;
 }
 .speaking__cta {
@@ -777,7 +778,7 @@ button { cursor: pointer; font-family: var(--font-body); }
 }
 .speaking__cta p {
   font-size: 1rem;
-  color: rgba(255,255,255,.4);
+  color: rgba(255,255,255,.65); /* was .4 — improved readability */
   line-height: 1.5;
 }
 
@@ -809,7 +810,7 @@ button { cursor: pointer; font-family: var(--font-body); }
 }
 .contact__intro {
   font-size: 1rem;
-  color: rgba(255,255,255,.45);
+  color: rgba(255,255,255,.7); /* was .45 — contact intro is meaningful body text, needs better contrast */
   line-height: 1.8;
   margin-bottom: 48px;
 }
@@ -830,13 +831,13 @@ button { cursor: pointer; font-family: var(--font-body); }
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.25);
+  color: rgba(255,255,255,.45); /* was .25 — improved readability */
   flex-shrink: 0;
   width: 80px;
 }
 .contact__link-value {
   font-size: 0.9375rem;
-  color: rgba(255,255,255,.65);
+  color: rgba(255,255,255,.8); /* was .65 — contact links are primary interaction elements */
   transition: color 0.2s;
 }
 .contact__link:hover .contact__link-value { color: var(--white); }
@@ -854,7 +855,7 @@ button { cursor: pointer; font-family: var(--font-body); }
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.25);
+  color: rgba(255,255,255,.5); /* was .25 — form labels must be readable */
 }
 .form-group input,
 .form-group textarea {
@@ -962,3 +963,110 @@ button { cursor: pointer; font-family: var(--font-body); }
   opacity: 1;
   transform: none;
 }
+
+/* ── 16. Skip Navigation ── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 200;
+  background: var(--red);
+  color: var(--white);
+  padding: 10px 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 16px;
+}
+
+/* ── 17. Focus Styles ── */
+/* Visible focus ring for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+}
+/* On dark backgrounds, use a lighter ring */
+.nav :focus-visible,
+.ventures :focus-visible,
+.speaking :focus-visible,
+.contact :focus-visible,
+.hero :focus-visible,
+.manifesto :focus-visible,
+.article-hero :focus-visible,
+.article-footer-band :focus-visible,
+.footer :focus-visible {
+  outline-color: var(--red-dark);
+}
+/* Form focus: border glow instead of outline */
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+  outline: none;
+  border-color: rgba(255,255,255,.5);
+  box-shadow: 0 0 0 3px rgba(217,114,127,.2);
+}
+/* Remove default outline for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ── 18. Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  /* Make hero content immediately visible */
+  .hero__eyebrow,
+  .hero__headline,
+  .hero__descriptor,
+  .hero__actions,
+  .hero__scroll {
+    opacity: 1;
+    animation: none;
+  }
+  /* Make reveal elements immediately visible */
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  /* Disable scroll pulse */
+  .hero__scroll-line {
+    animation: none;
+    opacity: 0.5;
+  }
+}
+
+/* ── 19. Article page accessibility overrides ── */
+/* These use higher specificity (2 classes) to override per-page inline style blocks (1 class),
+   fixing contrast issues without touching each HTML file individually.             */
+
+/* Article hero: red category label on midnight background — was var(--red) at ~1.35:1 */
+.article-hero .article-hero__cat  { color: var(--red-dark); }
+
+/* Article hero: time, date, and subtitle — opacity values in inline styles were too low */
+.article-hero .article-hero__time,
+.article-hero .article-hero__date { color: rgba(255,255,255,.55); }
+.article-hero .article-hero__sub  { color: rgba(255,255,255,.6); }
+.article-hero .article-hero__back { color: rgba(255,255,255,.5); }
+
+/* Article footer band "Written by" label — was .25 across all pages */
+.article-footer-band .article-footer-band__label { color: rgba(255,255,255,.5); }
+
+/* Stats band labels in cloud-secret.html and fusion-energy.html — was .3 */
+.stats-band .stat-block__l { color: rgba(255,255,255,.5); }
+
+/* Lightside Creed eyebrow — var(--red) on midnight is ~1.35:1 */
+.creed .creed__eyebrow { color: var(--red-dark); }
+
+/* Lightside Creed closing line — was .45 on midnight */
+.creed .creed__close p { color: rgba(255,255,255,.65); }

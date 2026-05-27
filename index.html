@@ -13,6 +13,9 @@
 </head>
 <body>
 
+  <!-- ── SKIP NAV ── -->
+  <a href="#hero" class="skip-link">Skip to main content</a>
+
   <!-- ── NAV ── -->
   <header class="nav" id="nav">
     <div class="nav__inner">
@@ -24,7 +27,7 @@
         <a href="#speaking" class="nav__link">Speaking</a>
         <a href="#contact" class="nav__link nav__link--accent">Connect</a>
       </nav>
-      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navDrawer">
         <span></span><span></span>
       </button>
     </div>
@@ -38,12 +41,10 @@
   </header>
 
   <!-- ── HERO ── -->
-  <section class="hero" id="hero">
+  <section class="hero" id="hero" tabindex="-1">
     <div class="hero__inner">
       <div class="hero__eyebrow">
         <span>Los Angeles &middot; Phoenix &middot; Sacramento</span>
-        <span class="hero__eyebrow-sep"></span>
-        <span>MBA Candidate &middot; UCLA Anderson &middot; 2026</span>
       </div>
       <h1 class="hero__headline">
         Building enduring<br>
