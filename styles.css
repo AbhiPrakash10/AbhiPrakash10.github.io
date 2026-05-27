@@ -366,6 +366,13 @@ button { cursor: pointer; font-family: var(--font-body); }
   color: var(--gray-500);
   margin-top: 14px;
 }
+.story__photo-sig {
+  display: block;
+  width: 220px;
+  margin-top: 20px;
+  mix-blend-mode: multiply; /* removes white bg — ink sits on off-white naturally */
+  opacity: 0.82;
+}
 .story__headline {
   font-family: var(--font-display);
   font-weight: 900;
