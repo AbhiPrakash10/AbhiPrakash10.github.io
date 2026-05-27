@@ -11,9 +11,9 @@
   --graphite:   #1E2530;
   --off-white:  #F3F0E8;
   --white:      #FFFFFF;
-  --red:        #6E1F28;
-  --red-hover:  #8B2733;
-  --red-dark:   #D9727F; /* accessible red for use on dark backgrounds — passes 4.5:1 on midnight & graphite */
+  --red:        #C41E3A;  /* Cardinal Red — vibrant, premium; 5.3:1 on off-white, 6.0:1 on white */
+  --red-hover:  #A5182F;  /* darker for hover/active states */
+  --red-dark:   #E5677C;  /* accessible red for dark backgrounds — 5.6:1 on midnight, 4.8:1 on graphite */
   --steel:      #324A5F;
 
   --gray-100:   #E8E5DC;
@@ -295,7 +295,7 @@ button { cursor: pointer; font-family: var(--font-body); }
 .hero__scroll-line {
   width: 1px;
   height: 48px;
-  background: linear-gradient(to bottom, transparent, rgba(110,31,40,.6), transparent);
+  background: linear-gradient(to bottom, transparent, rgba(196,30,58,.6), transparent);
   animation: scrollPulse 2.5s 1.5s ease-in-out infinite;
 }
 .hero__scroll-label {
