@@ -434,10 +434,10 @@ button { cursor: pointer; font-family: var(--font-body); }
 
 .venture-item {
   display: grid;
-  grid-template-columns: 220px 1fr 140px;
+  grid-template-columns: 160px 1fr 140px;
   gap: 40px;
   align-items: center;
-  padding: 36px 0;
+  padding: 28px 0;
   border-top: 1px solid rgba(255,255,255,.08);
   position: relative;
   transition: background 0.25s var(--ease);
@@ -455,15 +455,6 @@ button { cursor: pointer; font-family: var(--font-body); }
 .venture-item:hover::before { width: 100%; }
 .venture-item:hover .venture-name { color: var(--white); }
 
-.venture-num {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: rgba(255,255,255,.2);
-  margin-bottom: 8px;
-}
 .venture-cat {
   display: block;
   font-size: 0.6875rem;
@@ -503,13 +494,14 @@ button { cursor: pointer; font-family: var(--font-body); }
 .venture-link:hover .venture-arrow { transform: translateX(4px); }
 
 @media (max-width: 900px) {
-  .venture-item { grid-template-columns: 160px 1fr; grid-template-rows: auto auto; }
+  .venture-item { grid-template-columns: 140px 1fr; grid-template-rows: auto auto; }
   .venture-item__right { grid-column: 2; justify-content: flex-start; }
   .venture-link { justify-content: flex-start; }
 }
 @media (max-width: 640px) {
-  .ventures { padding: 80px 0; }
-  .venture-item { grid-template-columns: 1fr; gap: 16px; }
+  .ventures { padding: 72px 0; }
+  .venture-item { grid-template-columns: 1fr; gap: 0; padding: 20px 0; }
+  .venture-item__left { display: none; } /* category label is redundant on mobile without the number */
   .venture-item__right { display: none; }
 }
 
