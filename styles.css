@@ -136,12 +136,12 @@ button { cursor: pointer; font-family: var(--font-body); }
   justify-content: space-between;
 }
 .nav__logo {
-  font-family: var(--font-signature);
-  font-weight: 400;
-  font-size: 1.875rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.9375rem;
   color: var(--white);
-  letter-spacing: 0;
-  line-height: 1;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   transition: color 0.2s;
 }
 .nav__logo:hover { color: rgba(255,255,255,.7); }
