@@ -74,7 +74,7 @@ const sectionObs = new IntersectionObserver((entries) => {
 
 sections.forEach(s => sectionObs.observe(s));
 
-// ── Contact form (Web3Forms) ──
+// ── Contact form (Formspree) ──
 const form     = document.getElementById('contactForm');
 const formNote = document.getElementById('formNote');
 
@@ -108,22 +108,19 @@ form.addEventListener('submit', async e => {
   submitBtn.disabled = true;
 
   try {
-    const res = await fetch('https://api.web3forms.com/submit', {
+    const res = await fetch('https://formspree.io/f/xojbkeeb', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        access_key: 'fa014cd4-74c9-4252-bb45-7ef6c3dbd830',
-        name, email, message,
-        subject: 'New message from abhiprakash.com'
-      })
+      body: JSON.stringify({ name, email, message })
     });
     const data = await res.json();
-    if (data.success) {
+    if (data.ok) {
       form.reset();
       formNote.textContent = 'Message received. I\'ll be in touch.';
       formNote.classList.add('success');
     } else {
-      formNote.textContent = data.message || 'Something went wrong. Please try again.';
+      const err = data.errors?.map(e => e.message).join(' ') || 'Something went wrong. Please try again.';
+      formNote.textContent = err;
     }
   } catch {
     formNote.textContent = 'Network error — please check your connection.';
