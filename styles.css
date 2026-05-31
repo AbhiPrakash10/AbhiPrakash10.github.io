@@ -1083,3 +1083,36 @@ button { cursor: pointer; font-family: var(--font-body); }
 
 /* Lightside Creed closing line — was .45 on midnight */
 .creed .creed__close p { color: rgba(255,255,255,.65); }
+
+/* ── 20. Reading progress bar (article pages) ── */
+.reading-progress {
+  position: fixed;
+  top: 0; left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--red);
+  z-index: 300;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reading-progress { display: none; }
+}
+
+/* ── 21. Coming-soon article cards ── */
+.article-card--coming-soon {
+  opacity: 0.55;
+  pointer-events: none;
+}
+.article-card--coming-soon:hover {
+  transform: none;
+  border-top-color: transparent;
+}
+
+/* ── 22. Page fade-in transition ── */
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  body { animation: pageFadeIn 0.38s var(--ease) both; }
+}
