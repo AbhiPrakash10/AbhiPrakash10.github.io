@@ -369,15 +369,21 @@ button { cursor: pointer; font-family: var(--font-body); }
 .story__badges {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 12px;
+  gap: 16px;
+  margin-top: 14px;
 }
 .story__badge {
-  width: 32px;
-  height: 32px;
+  display: block;
+  height: 48px;
+  width: auto;
   object-fit: contain;
-  border-radius: 50%;
-  border: 1px solid var(--gray-100);
+}
+.story__badge--flag {
+  height: 32px;
+  border-radius: 3px;
+}
+.story__badge--logo {
+  height: 40px;
 }
 .story__photo-sig {
   display: block;
