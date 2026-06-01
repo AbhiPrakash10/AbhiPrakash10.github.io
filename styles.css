@@ -378,58 +378,11 @@ button { cursor: pointer; font-family: var(--font-body); }
   width: auto;
   border-radius: 3px;
 }
-.story__badge--ua {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  text-decoration: none;
-}
-.badge-block-a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  background: #AB0520;
-  color: #fff;
-  font-family: Georgia, serif;
-  font-weight: 700;
-  font-size: 16px;
-  border-radius: 3px;
-  flex-shrink: 0;
-}
-.badge-school-name {
-  display: flex;
-  flex-direction: column;
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 6.5px;
-  letter-spacing: 0.06em;
-  color: #AB0520;
-  line-height: 1.35;
-  text-transform: uppercase;
-}
-.story__badge--ucla {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-  text-decoration: none;
-}
-.badge-ucla-word {
-  font-family: var(--font-body);
-  font-weight: 900;
-  font-size: 20px;
-  color: #2774AE;
-  letter-spacing: -0.5px;
-  line-height: 1;
-}
-.badge-ucla-sub {
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 6px;
-  color: #2774AE;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.story__badge--seal {
+  display: block;
+  height: 52px;
+  width: 52px;
+  object-fit: contain;
 }
 .story__photo-sig {
   display: block;
