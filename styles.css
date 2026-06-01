@@ -379,11 +379,12 @@ button { cursor: pointer; font-family: var(--font-body); }
   object-fit: contain;
 }
 .story__badge--flag {
-  height: 32px;
+  height: 28px;
   border-radius: 3px;
 }
-.story__badge--logo {
-  height: 40px;
+.story__badge--svg {
+  height: 36px;
+  width: auto;
 }
 .story__photo-sig {
   display: block;
