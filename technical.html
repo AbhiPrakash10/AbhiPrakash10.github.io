@@ -136,6 +136,7 @@
     <div class="navlinks">
       <a href="/">Home</a>
       <a href="#work">Work</a>
+      <a href="#case-studies">Case Studies</a>
       <a href="#stack">Stack</a>
       <a href="#ventures">Ventures</a>
       <a class="cta" href="mailto:abhiprakash20@gmail.com">Contact →</a>
@@ -219,9 +220,58 @@
   </div>
 </section>
 
+<style>
+#case-studies .csgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(288px,1fr));gap:18px;margin-top:10px;}
+#case-studies .cscard{display:flex;flex-direction:column;gap:11px;background:var(--bg-2);border:1px solid var(--line);border-radius:16px;padding:22px 22px 20px;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s;}
+#case-studies .cscard:hover{border-color:var(--accent);transform:translateY(-3px);}
+#case-studies .cstop{display:flex;align-items:center;justify-content:space-between;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;}
+#case-studies .csnum{color:var(--faint);}
+#case-studies .cstag{color:var(--accent);}
+#case-studies .cscard h3{margin:0;font-size:19px;font-weight:660;letter-spacing:-.01em;color:var(--fg);}
+#case-studies .cscard p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.56;flex:1;}
+#case-studies .csread{font-family:var(--mono);font-size:12.5px;color:var(--accent);}
+</style>
+<section class="blk" id="case-studies" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-top"><span class="sec-idx">02</span><div><div class="eyebrow">Deep-Dives</div><h2>Case studies — the engineering, in depth</h2></div></div>
+    <div class="csgrid">
+      <a class="cscard" href="case-partneros.html">
+        <div class="cstop"><span class="csnum">01</span><span class="cstag">Full-Stack</span></div>
+        <h3>PartnerOS Architecture</h3>
+        <p>A two-sided marketplace: 141 API routes, a 70-table RLS-secured Postgres schema with a rendered ERD, background jobs, billing, and observability.</p>
+        <span class="csread">Read the case study →</span>
+      </a>
+      <a class="cscard" href="case-fabric.html">
+        <div class="cstop"><span class="csnum">02</span><span class="cstag">AI / LLM</span></div>
+        <h3>Fabric — Agentic Data Fabric</h3>
+        <p>Trust-governed enrichment on Claude: web-search tool use, a tool-less sandboxed extractor, code-enforced verification, prompt-injection defense, and a cost circuit-breaker.</p>
+        <span class="csread">Read the case study →</span>
+      </a>
+      <a class="cscard" href="case-auth-rls.html">
+        <div class="cstop"><span class="csnum">03</span><span class="cstag">Security</span></div>
+        <h3>Auth &amp; Row-Level Security</h3>
+        <p>Authorization in the database: 66 RLS tables, 96 policies, a diagnosed RLS recursion bug, performance-aware policies, and tamper-proof audit triggers.</p>
+        <span class="csread">Read the case study →</span>
+      </a>
+      <a class="cscard" href="case-systems.html">
+        <div class="cstop"><span class="csnum">04</span><span class="cstag">Systems</span></div>
+        <h3>Personal Operating System</h3>
+        <p>A live, self-maintaining system: a single-source-of-truth venture pattern, a launchd automation loop, a self-generated status report, and a full audit trail.</p>
+        <span class="csread">Read the case study →</span>
+      </a>
+      <a class="cscard" href="case-lightside.html">
+        <div class="cstop"><span class="csnum">05</span><span class="cstag">Edge App</span></div>
+        <h3>Lightside — Edge on Cloudflare</h3>
+        <p>TanStack Start SSR on Cloudflare Workers with a secure edge server function: Zod validation, honeypot + timing anti-spam, and a Supabase secret split.</p>
+        <span class="csread">Read the case study →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <section class="blk" id="stack" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
-    <div class="sec-top"><span class="sec-idx">02</span><div><div class="eyebrow">Technical Arsenal</div><h2>The tools, by discipline</h2></div></div>
+    <div class="sec-top"><span class="sec-idx">03</span><div><div class="eyebrow">Technical Arsenal</div><h2>The tools, by discipline</h2></div></div>
     <div class="arsenal">
       <div class="cat"><h4>Frontend</h4><div class="items"><span class="chip">Next.js</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Tailwind</span><span class="chip">Radix / shadcn</span><span class="chip">Recharts</span><span class="chip">d3</span></div></div>
       <div class="cat"><h4>Backend &amp; Data</h4><div class="items"><span class="chip">Node.js</span><span class="chip">PostgreSQL</span><span class="chip">Supabase</span><span class="chip">Redis (Upstash)</span><span class="chip">Inngest</span><span class="chip">Stripe</span><span class="chip">Resend</span></div></div>
@@ -235,7 +285,7 @@
 
 <section class="blk" id="ventures">
   <div class="wrap">
-    <div class="sec-top"><span class="sec-idx">03</span><div><div class="eyebrow">Operator</div><h2>Ventures across four industries</h2></div></div>
+    <div class="sec-top"><span class="sec-idx">04</span><div><div class="eyebrow">Operator</div><h2>Ventures across four industries</h2></div></div>
     <div class="ventures">
       <div class="vt"><div class="dom">Real Estate</div><div class="nm">Aer West</div><div class="ds">Holding co. + full operating system</div></div>
       <div class="vt"><div class="dom">Venture Capital</div><div class="nm">Lightside</div><div class="ds">Northern Arizona Fund I</div></div>
@@ -248,7 +298,7 @@
 
 <section class="blk" id="ethos" style="background:var(--bg-2);border-top:1px solid var(--line)">
   <div class="wrap">
-    <div class="sec-top"><span class="sec-idx">04</span><div class="eyebrow">Ethos</div></div>
+    <div class="sec-top"><span class="sec-idx">05</span><div class="eyebrow">Ethos</div></div>
     <p class="ethos-q">I don't stop at features. I build the <span class="em">system</span> — and then I <span class="em">operate</span> it.</p>
     <p class="ethos-body">Most engineers ship code; most operators can't build. I do both — which means I design for how a thing will actually run, not just how it demos. Production apps, the pipelines and automation around them, the documentation that keeps them maintainable, and the business decisions on top. Depth in the stack, breadth across ventures, unified by one habit: shipping things that last.</p>
   </div>
