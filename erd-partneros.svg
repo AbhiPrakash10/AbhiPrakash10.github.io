@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1480 920" font-family="ui-monospace,'SF Mono','GeistMono',Menlo,monospace" role="img" aria-label="PartnerOS core data model entity-relationship diagram">
+<defs>
+  <style>
+    .bg{fill:#0b1112}
+    .card{fill:#141c1d;stroke:#223032;stroke-width:1.2}
+    .cardhub{fill:#10201e;stroke:#1ad9c4;stroke-width:1.6}
+    .ttl{fill:#63f5e2;font-size:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .ttlgold{fill:#f2c66b;font-size:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .sub{fill:#5c7071;font-size:12px}
+    .row{fill:#c7d3d2;font-size:14px}
+    .rowhub{fill:#eafffb;font-size:14.5px;font-weight:700}
+    .pgttl{fill:#e7edec;font-size:26px;font-weight:700;letter-spacing:-.01em}
+    .pgsub{fill:#8ba0a0;font-size:13.5px}
+    .rel{stroke:#1ad9c4;stroke-width:1.6;fill:none;opacity:.75}
+    .relgold{stroke:#e0a94a;stroke-width:1.8;fill:none;opacity:.8}
+    .relfaint{stroke:#2e4042;stroke-width:1.2;fill:none;stroke-dasharray:4 4}
+    .rellbl{fill:#8ba0a0;font-size:11.5px}
+    .star{fill:#1ad9c4;font-size:12px}
+    .leg{fill:#5c7071;font-size:12px}
+  </style>
+  <marker id="arw" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#1ad9c4"/></marker>
+  <marker id="arwg" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#e0a94a"/></marker>
+</defs>
+<rect class="bg" x="0" y="0" width="1480" height="920" rx="20"/>
+<text class="pgttl" x="60" y="52">PartnerOS — core data model</text>
+<text class="pgsub" x="60" y="76">70 tables · 92 foreign keys · multi-tenant, organization- &amp; owner-scoped (RLS) · ★ = hub</text>
+<path class="relfaint" d="M740.0,268 C740.0,238 740.0,244 740.0,214"/>
+<path class="relfaint" d="M270.0,268 C270.0,238 740.0,244 740.0,214"/>
+<path class="relfaint" d="M1210.0,268 C1210.0,238 740.0,244 740.0,214"/>
+<rect class="cardhub" x="60" y="96" width="1360" height="118" rx="14"/>
+<text class="ttl" x="78" y="124">Identity &amp; Tenancy</text>
+<text class="sub" x="78" y="142">every table below is scoped to organization_id + owner (Row-Level Security)</text>
+<text class="rowhub" x="78" y="176">★ organizations</text>
+<text class="rowhub" x="250.0" y="176">★ profiles</text>
+<text class="row" x="376.0" y="176">organization_members</text>
+<text class="row" x="594.0" y="176">org_invites</text>
+<text class="row" x="729.2" y="176">api_keys</text>
+<rect class="card" x="60" y="268" width="420" height="232" rx="14"/>
+<text class="ttl" x="78" y="296">Rights-holder · Supply</text>
+<text class="sub" x="78" y="314">the sellable inventory</text>
+<text class="rowhub" x="78" y="338"><tspan class="star">★ </tspan>properties</text>
+<text class="rowhub" x="78" y="360.5"><tspan class="star">★ </tspan>inventory</text>
+<text class="rowhub" x="78" y="383.0"><tspan class="star">★ </tspan>inventory_packages</text>
+<text class="row" x="78" y="405.5"><tspan class="sub">· </tspan>inventory_package_items</text>
+<text class="row" x="78" y="428.0"><tspan class="sub">· </tspan>inventory_share_links</text>
+<text class="row" x="78" y="450.5"><tspan class="sub">· </tspan>inventory_audit_log</text>
+<rect class="card" x="530" y="268" width="420" height="232" rx="14"/>
+<text class="ttlgold" x="548" y="296">Marketplace · Deal Spine</text>
+<text class="sub" x="548" y="314">opportunities &amp; matching</text>
+<text class="row" x="548" y="338"><tspan class="sub">· </tspan>match_results</text>
+<text class="row" x="548" y="360.5"><tspan class="sub">· </tspan>brand_briefs</text>
+<text class="rowhub" x="548" y="383.0"><tspan class="star">★ </tspan>inbound_interest</text>
+<text class="rowhub" x="548" y="405.5"><tspan class="star">★ </tspan>deal_stages</text>
+<text class="row" x="548" y="428.0"><tspan class="sub">· </tspan>activations</text>
+<text class="row" x="548" y="450.5"><tspan class="sub">· </tspan>pitch_decks</text>
+<rect class="card" x="1000" y="268" width="420" height="232" rx="14"/>
+<text class="ttl" x="1018" y="296">Brand · Demand</text>
+<text class="sub" x="1018" y="314">who's buying</text>
+<text class="row" x="1018" y="338"><tspan class="sub">· </tspan>brand_profiles</text>
+<text class="row" x="1018" y="360.5"><tspan class="sub">· </tspan>brand_briefs</text>
+<text class="row" x="1018" y="383.0"><tspan class="sub">· </tspan>brand_watchlist</text>
+<text class="row" x="1018" y="405.5"><tspan class="sub">· </tspan>brand_match_alerts</text>
+<text class="rowhub" x="1018" y="428.0"><tspan class="star">★ </tspan>target_lists</text>
+<text class="row" x="1018" y="450.5"><tspan class="sub">· </tspan>target_list_entries</text>
+<rect class="card" x="60" y="548" width="420" height="300" rx="14"/>
+<text class="ttl" x="78" y="576">Intelligence · IQI</text>
+<text class="sub" x="78" y="594">scoring, enrichment, provenance</text>
+<text class="row" x="78" y="618"><tspan class="sub">· </tspan>property_intelligence_profiles</text>
+<text class="row" x="78" y="640.5"><tspan class="sub">· </tspan>iqi_snapshots</text>
+<text class="rowhub" x="78" y="663.0"><tspan class="star">★ </tspan>fact_ledger</text>
+<text class="row" x="78" y="685.5"><tspan class="sub">· </tspan>agent_runs</text>
+<text class="row" x="78" y="708.0"><tspan class="sub">· </tspan>external_sources</text>
+<text class="row" x="78" y="730.5"><tspan class="sub">· </tspan>review_queue</text>
+<text class="rowhub" x="78" y="753.0"><tspan class="star">★ </tspan>valuation_estimates</text>
+<text class="row" x="78" y="775.5"><tspan class="sub">· </tspan>price_recommendations</text>
+<text class="row" x="78" y="798.0"><tspan class="sub">· </tspan>calibration_metrics</text>
+<rect class="card" x="530" y="548" width="420" height="300" rx="14"/>
+<text class="ttlgold" x="548" y="576">Deal Lifecycle</text>
+<text class="sub" x="548" y="594">proposal → contract → paid → measured</text>
+<text class="row" x="548" y="618"><tspan class="sub">· </tspan>deal_proposals</text>
+<text class="rowhub" x="548" y="640.5"><tspan class="star">★ </tspan>deal_contracts</text>
+<text class="row" x="548" y="663.0"><tspan class="sub">· </tspan>contract_signatures</text>
+<text class="row" x="548" y="685.5"><tspan class="sub">· </tspan>deal_documents</text>
+<text class="row" x="548" y="708.0"><tspan class="sub">· </tspan>deal_messages</text>
+<text class="row" x="548" y="730.5"><tspan class="sub">· </tspan>deal_performance</text>
+<text class="row" x="548" y="753.0"><tspan class="sub">· </tspan>deal_performance_snapshots</text>
+<text class="row" x="548" y="775.5"><tspan class="sub">· </tspan>payment_events</text>
+<text class="row" x="548" y="798.0"><tspan class="sub">· </tspan>realized_outcomes</text>
+<text class="row" x="548" y="820.5"><tspan class="sub">· </tspan>renewal_pitches</text>
+<rect class="card" x="1000" y="548" width="420" height="300" rx="14"/>
+<text class="ttl" x="1018" y="576">Platform &amp; Compliance</text>
+<text class="sub" x="1018" y="594">APIs, webhooks, consent, docs</text>
+<text class="row" x="1018" y="618"><tspan class="sub">· </tspan>notifications</text>
+<text class="row" x="1018" y="640.5"><tspan class="sub">· </tspan>notification_preferences</text>
+<text class="rowhub" x="1018" y="663.0"><tspan class="star">★ </tspan>webhooks</text>
+<text class="row" x="1018" y="685.5"><tspan class="sub">· </tspan>webhook_deliveries</text>
+<text class="row" x="1018" y="708.0"><tspan class="sub">· </tspan>consent_log</text>
+<text class="row" x="1018" y="730.5"><tspan class="sub">· </tspan>deletion_requests</text>
+<text class="row" x="1018" y="753.0"><tspan class="sub">· </tspan>import_jobs</text>
+<text class="row" x="1018" y="775.5"><tspan class="sub">· </tspan>generated_deliverables</text>
+<text class="row" x="1018" y="798.0"><tspan class="sub">· </tspan>intelligence_events</text>
+<path class="rel" marker-end="url(#arw)" d="M480,384 C505,384 505,384 530,384"/>
+<text class="rellbl" x="505" y="378" text-anchor="middle">inventory →</text>
+<path class="rel" marker-end="url(#arw)" d="M1000,384 C975,384 975,384 950,384"/>
+<text class="rellbl" x="975" y="378" text-anchor="middle">match →</text>
+<path class="relgold" marker-end="url(#arwg)" d="M740,548 C740,548 740,500 740,500"/>
+<text class="rellbl" x="740" y="518" text-anchor="middle">10× deal_* →</text>
+<path class="rel" marker-end="url(#arw)" d="M270,548 C270,548 270,500 270,500"/>
+<text class="rellbl" x="270" y="518" text-anchor="middle">enriches</text>
+<line x1="60" y1="886" x2="92" y2="886" class="rel" marker-end="url(#arw)"/>
+<text class="leg" x="100" y="890">foreign key</text>
+<line x1="210" y1="886" x2="242" y2="886" class="relgold" marker-end="url(#arwg)"/>
+<text class="leg" x="250" y="890">deal spine (inbound_interest)</text>
+<line x1="490" y1="886" x2="522" y2="886" class="relfaint"/>
+<text class="leg" x="530" y="890">org / owner scoping (RLS) — all tables</text>
+<text class="leg" x="60" y="908" opacity=".7">Core entities shown; full schema is 70 tables across 61 sequential migrations. Generated from the real FK graph, 2026-07-12.</text>
+</svg>
