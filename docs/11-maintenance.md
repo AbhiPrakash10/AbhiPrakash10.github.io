@@ -22,7 +22,7 @@
   → Identify where users drop off
 
 □ Check all external links still work
-  → Lightbear.ai, lightside.vc, asearis.com, rightsos.xyz
+  → Lightbear.ai, lightside.vc, asearis.com, rightsos.ai
   → LinkedIn, Instagram, GitHub profile links
 
 □ Review Formspree submission volume
