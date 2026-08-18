@@ -80,7 +80,7 @@ Subscriber-only content (requires auth)
 ### Phase 5: Product Integration (18+ months)
 ```
 Lightbear.AI product demos embedded
-PartnerOS partnership portal
+RightsOS partnership portal
 Private investor portal (requires auth + database)
 ```
 

@@ -58,7 +58,7 @@ Types:
   chore    — maintenance (dependencies, config)
 
 Examples:
-  feat: add PartnerOS to ventures section
+  feat: add RightsOS to ventures section
   fix: correct active ventures stat from 4 to 6
   content: publish Athletic Edge article
   style: increase hero headline weight on mobile

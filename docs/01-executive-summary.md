@@ -42,7 +42,7 @@ The platform exists to:
 - **Students & Mentees** — seeking guidance on business, leadership, career
 - **Media & Journalists** — background research, quotes, story pitches
 - **Collaborators** — potential partners across any of the 6 ventures
-- **PartnerOS Prospects** — sports, media, and entertainment partnership ecosystem
+- **RightsOS Prospects** — sports, media, and entertainment partnership ecosystem
 
 ---
 

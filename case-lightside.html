@@ -271,7 +271,7 @@ if (data.elapsedMs &lt; 2000) return { ok: false, code: &quot;too_fast&quot;, me
 <ol>
 <li>Add server-side <strong>rate limiting</strong> on the pitch endpoint (Cloudflare KV / Durable Objects or Upstash) to complement the honeypot/timing checks.</li>
 <li>Persist submissions to a <strong>Supabase table</strong> (audit + CRM) in addition to the email, with RLS.</li>
-<li>A brief <strong>edge-vs-origin</strong> write-up (why Workers here, trade-offs) as a companion to the PartnerOS full-stack study.</li>
+<li>A brief <strong>edge-vs-origin</strong> write-up (why Workers here, trade-offs) as a companion to the RightsOS full-stack study.</li>
 </ol>
 <hr />
 <h2>Appendix · Stack &amp; code map</h2>

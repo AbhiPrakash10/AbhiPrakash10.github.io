@@ -85,7 +85,7 @@ ABHI PRAKASH [logo/home]
 | Aer West | Real Estate | Inquire (contact) | Investment arm |
 | Peak Basketball | Sports & Education | Connect (contact) | Community/impact |
 | Asearis Data Systems | Data & Technology | External visit | Data infrastructure company |
-| PartnerOS | Sports, Media & Entertainment | External visit | Partnership platform |
+| RightsOS | Sports, Media & Entertainment | External visit | Partnership platform |
 
 **Hover behavior:** Cardinal red line animates across the top of each row. Name brightens to white. Arrow shifts right on the Visit/Inquire link.
 
