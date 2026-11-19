@@ -532,6 +532,11 @@ button { cursor: pointer; font-family: var(--font-body); }
 .venture-arrow { transition: transform 0.2s var(--ease); }
 .venture-link:hover .venture-arrow { transform: translateX(4px); }
 
+/* Whole row clickable (the Read link is hidden on mobile) */
+.venture-item--link { cursor: pointer; }
+.venture-item__stretch { color: inherit; text-decoration: none; }
+.venture-item__stretch::after { content: ''; position: absolute; inset: 0; z-index: 1; }
+
 @media (max-width: 900px) {
   .venture-item { grid-template-columns: 140px 1fr; grid-template-rows: auto auto; }
   .venture-item__right { grid-column: 2; justify-content: flex-start; }
