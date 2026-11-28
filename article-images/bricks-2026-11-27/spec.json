@@ -1,0 +1,16 @@
+{
+  "prefix": "bricks",
+  "kicker": "BRICKS AND BOX SCORES",
+  "title": ["Zero Points,", "$3 Billion"],
+  "gold": 1,
+  "dek": ["The newest team in Formula 1 is last in the standings.", "Its reported price is about twice what it cost to create."],
+  "stats": [["0", "points for Cadillac in 2026,", "as of November 27"], ["$1.45B", "reported cost: entry fee", "plus build-out"], ["$2.7B", "Sportico's valuation,", "lowest of 11 teams"], ["$3B", "reported asking", "valuation, at least"]],
+  "sources": "Sportico and BBC figures as reported by RACER, PlanetF1 and GPFans",
+  "chart": {
+    "name": "cost-vs-value",
+    "title": "What it cost, and what it is said to be worth",
+    "subtitle": "Cadillac Formula 1 team, in billions of dollars",
+    "note": "All-in cost is Finance Forward arithmetic: the reported $450 million fee plus Sportico's estimate of about $1 billion invested.",
+    "rows": [["Entry fee paid to the ten existing teams", 0.45, "$0.45B", "blue"], ["All-in cost: fee plus build-out", 1.45, "about $1.45B", "blue"], ["Sportico's valuation of Cadillac", 2.70, "$2.7B", "blue"], ["Reported asking valuation", 3.00, "at least $3B", "gold"], ["Average F1 team, per Sportico", 4.55, "$4.55B", "grey"]]
+  }
+}
